@@ -1,0 +1,16 @@
+while (true) {
+    logAndToast("Tìm node gem...");
+
+    let searchBtn = textContains("Search").findOne(5000);
+    if (searchBtn) {
+        searchBtn.click();
+        sleep(1000);
+        let gemTab = textContains("Gem").findOne(3000);
+        if (gemTab) gemTab.click();
+        sleep(1000);
+        let findBtn = textContains("Find").findOne(3000);
+        if (findBtn) findBtn.click();
+        logAndToast("Đã tìm thấy node gem.");
+    }
+
+    sleep(3000);
